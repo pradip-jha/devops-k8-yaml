@@ -4,18 +4,13 @@ metadata:
   labels:
     app: flask
   name: flask
-  resourceVersion: "2870"
+
 spec:
   ports:
-  - nodePort: 31917
-    port: 8080
+  - port: 8080
     protocol: TCP
     targetPort: 5000
   selector:
     app: flask
   sessionAffinity: None
   type: NodePort
-status:
-  loadBalancer:
-    ingress:
-    - hostname: localhost
