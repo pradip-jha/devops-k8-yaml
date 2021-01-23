@@ -1,0 +1,5 @@
+commonLabels:
+  author: pradip
+resources:
+- flask-deploy.yaml
+- flask-svc.yaml
