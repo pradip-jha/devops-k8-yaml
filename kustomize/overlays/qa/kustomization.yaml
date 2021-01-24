@@ -10,7 +10,7 @@ commonLabels:
 images:
 - name: pankaj2934/flask-app
   newName: pankaj2934/flask-app
-  newTag: "0.24"
+  newTag: "0.25"
 
 patchesStrategicMerge:
 - deploymentpatch.yaml
