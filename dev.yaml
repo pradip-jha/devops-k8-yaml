@@ -41,7 +41,7 @@ spec:
         enviroment: dev
     spec:
       containers:
-      - image: pankaj2934/flask-app:0.26
+      - image: pankaj2934/flask-app:0.27
         name: flask
         ports:
         - containerPort: 5000
