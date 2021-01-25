@@ -4,8 +4,7 @@ metadata:
   labels:
     app: flask
     author: pradip
-    enviroment: dev
-  name: dev-flask
+  name: flask
 spec:
   ports:
   - port: 8080
@@ -14,7 +13,6 @@ spec:
   selector:
     app: flask
     author: pradip
-    enviroment: dev
   sessionAffinity: None
   type: NodePort
 ---
@@ -24,24 +22,24 @@ metadata:
   labels:
     app: flask
     author: pradip
-    enviroment: dev
-  name: dev-flask
+  name: flask
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: flask
       author: pradip
-      enviroment: dev
   template:
     metadata:
       labels:
         app: flask
         author: pradip
-        enviroment: dev
     spec:
       containers:
-      - image: pankaj2934/flask-app:0.27
+      - env:
+        - name: PLATFORM
+          value: dev
+        image: pankaj2934/flask-app:0.8
         name: flask
         ports:
         - containerPort: 5000
