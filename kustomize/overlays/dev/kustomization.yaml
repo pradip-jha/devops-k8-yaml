@@ -1,14 +1,5 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
 resources:
 - ../../base
 
-namePrefix: dev-
-
-commonLabels:
-  enviroment: dev
-
-images:
-- name: pankaj2934/flask-app
-  newName: pankaj2934/flask-app
-  newTag: "0.27"
+patches:
+- path: patch.yaml
